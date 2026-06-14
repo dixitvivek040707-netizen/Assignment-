@@ -1,14 +1,11 @@
 #include <stdio.h>
-
+#include <string.h>
 int main() {
-    int n, fact = 1;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-
-    for(int i = 1; i <= n; i++) {
-        fact *= i;
+    char str[100];
+    scanf("%s", str);
+    int len = strlen(str);
+    for(int i = len - 1; i >= 0; i--) {
+        printf("%c", str[i]);
     }
-
-    printf("Factorial of %d = %d\n", n, fact);
     return 0;
 }
