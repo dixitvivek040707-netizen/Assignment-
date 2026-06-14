@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int num, count = 0;
+    int num, product = 1;
     printf("Enter a number: ");
     scanf("%d", &num);
 
     if(num == 0) {
-        count = 1; 
+        product = 0; 
     } else {
         while(num != 0) {
-            num = num / 10;  
-            count++;         
+            product *= (num % 10);
+            num = num / 10;         
         }
     }
 
-    printf("Number of digits = %d\n", count);
+    printf("Product of digits = %d\n", product);
     return 0;
 }
